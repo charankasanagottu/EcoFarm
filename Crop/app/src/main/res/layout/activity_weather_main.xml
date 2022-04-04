@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".WeatherMainActivity"
+    android:background="@drawable/weather_app"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_edittext01"
+        android:textSize="32sp"
+        android:textStyle="italic"
+        android:padding="5dp"
+        android:textColor="@color/Black"
+        android:text="Weather Update"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/backBtn"
+        android:backgroundTint="@color/Skyblue"
+        android:src="@drawable/back_ios"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1">
+        </View>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/shape_edittext01">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Black"
+                android:layout_marginTop="10dp"
+                android:id="@+id/tvResult" />
+        </ScrollView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etCity"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:background="@drawable/shape_edittext01"
+            android:textColor="@color/Black"
+            android:drawableStart="@drawable/ic_location"
+            android:hint="Enter City Name"
+            android:textColorHint="@color/Black"
+            android:inputType="textPersonName" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etCountry"
+            android:background="@drawable/shape_edittext01"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:textColorHint="@color/Black"
+            android:drawableStart="@drawable/ic_location"
+            android:textColor="@color/Black"
+            android:hint="Enter Country Code (Optional)"
+            android:inputType="textPersonName" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnGet"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shape_button01"
+            android:textColor="@android:color/white"
+            android:onClick="getWeatherDetails"
+            android:text="Get"
+            app:backgroundTint="@null" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6">
+        </View>
+    </LinearLayout>
+</LinearLayout>
